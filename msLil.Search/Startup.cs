@@ -10,6 +10,8 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using msLil.Search.Interfaces;
+using msLil.Search.Services;
 
 namespace msLil.Search
 {
@@ -25,7 +27,22 @@ namespace msLil.Search
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddSingleton<ICustomerService, CustomerService>();
+            services.AddSingleton<IProductService, ProductService>();
+            services.AddSingleton<ISalesService, SalesService>();
             services.AddControllers();
+            services.AddHttpClient("customersService", c =>
+            {
+                c.BaseAddress = new Uri(Configuration["Services:Customers"]);
+            });
+            services.AddHttpClient("productsService", c =>
+            {
+                c.BaseAddress = new Uri(Configuration["Services:Products"]);
+            });
+            services.AddHttpClient("salesService", c =>
+            {
+                c.BaseAddress = new Uri(Configuration["Services:Sales"]);
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -35,8 +52,6 @@ namespace msLil.Search
             {
                 app.UseDeveloperExceptionPage();
             }
-
-            app.UseHttpsRedirection();
 
             app.UseRouting();
 
