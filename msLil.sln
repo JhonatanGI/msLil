@@ -13,11 +13,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "msLil.Search", "msLil.Searc
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{7F9AF6EB-788E-4E42-BE57-B8EC26FD8748}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "msLil.Customers.Tests", "msLil.Customers.Tests\msLil.Customers.Tests.csproj", "{8E0C8FE1-2B61-474E-AD22-8F82ED8FCE42}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "msLil.Customers.Tests", "msLil.Customers.Tests\msLil.Customers.Tests.csproj", "{8E0C8FE1-2B61-474E-AD22-8F82ED8FCE42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "msLil.Products.Test", "msLil.Products.Test\msLil.Products.Test.csproj", "{C074FC4B-A4AD-4A7F-9B8E-EC9ABCE8F151}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "msLil.Products.Test", "msLil.Products.Test\msLil.Products.Test.csproj", "{C074FC4B-A4AD-4A7F-9B8E-EC9ABCE8F151}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "msLil.Sales.Test", "msLil.Sales.Test\msLil.Sales.Test.csproj", "{C380953C-4687-473D-A288-F07D46A2CB9D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "msLil.Sales.Test", "msLil.Sales.Test\msLil.Sales.Test.csproj", "{C380953C-4687-473D-A288-F07D46A2CB9D}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{AA212EEC-5967-42D3-9403-E2BD1261080C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -113,6 +115,18 @@ Global
 		{C380953C-4687-473D-A288-F07D46A2CB9D}.Release|x64.Build.0 = Release|Any CPU
 		{C380953C-4687-473D-A288-F07D46A2CB9D}.Release|x86.ActiveCfg = Release|Any CPU
 		{C380953C-4687-473D-A288-F07D46A2CB9D}.Release|x86.Build.0 = Release|Any CPU
+		{AA212EEC-5967-42D3-9403-E2BD1261080C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA212EEC-5967-42D3-9403-E2BD1261080C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA212EEC-5967-42D3-9403-E2BD1261080C}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{AA212EEC-5967-42D3-9403-E2BD1261080C}.Debug|x64.Build.0 = Debug|Any CPU
+		{AA212EEC-5967-42D3-9403-E2BD1261080C}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{AA212EEC-5967-42D3-9403-E2BD1261080C}.Debug|x86.Build.0 = Debug|Any CPU
+		{AA212EEC-5967-42D3-9403-E2BD1261080C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA212EEC-5967-42D3-9403-E2BD1261080C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA212EEC-5967-42D3-9403-E2BD1261080C}.Release|x64.ActiveCfg = Release|Any CPU
+		{AA212EEC-5967-42D3-9403-E2BD1261080C}.Release|x64.Build.0 = Release|Any CPU
+		{AA212EEC-5967-42D3-9403-E2BD1261080C}.Release|x86.ActiveCfg = Release|Any CPU
+		{AA212EEC-5967-42D3-9403-E2BD1261080C}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

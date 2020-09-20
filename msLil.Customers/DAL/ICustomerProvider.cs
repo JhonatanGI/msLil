@@ -1,5 +1,5 @@
-﻿using System.Threading.Tasks;
-using msLil.Customers.Models;
+﻿using msLil.Customers.Models;
+using System.Threading.Tasks;
 
 namespace msLil.Customers.DAL
 {

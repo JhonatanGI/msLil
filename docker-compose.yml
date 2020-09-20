@@ -1,0 +1,39 @@
+version: '3.4'
+
+services:
+  mslil.customers:
+    image: ${DOCKER_REGISTRY-}mslilcustomers
+    build:
+      context: .
+      dockerfile: msLil.Customers/Dockerfile
+    ports:
+      - 9000:80
+
+  mslil.products:
+    image: ${DOCKER_REGISTRY-}mslilproducts
+    build:
+      context: .
+      dockerfile: msLil.Products/Dockerfile
+    ports:
+      - 9100:80
+
+
+  mslil.sales:
+    image: ${DOCKER_REGISTRY-}mslilsales
+    build:
+      context: .
+      dockerfile: msLil.Sales/Dockerfile
+    ports:
+      - 9200:80
+
+  mslil.search:
+    image: ${DOCKER_REGISTRY-}mslilsearch
+    build:
+      context: .
+      dockerfile: msLil.Search/Dockerfile
+    ports:
+      - 9300:80
+    environment:
+      - Services__Customers=http://mslil.customers
+      - Services__Products=http://mslil.products
+      - Services__Sales=http://mslil.sales

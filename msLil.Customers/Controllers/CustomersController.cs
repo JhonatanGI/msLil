@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using msLil.Customers.DAL;
+using System.Threading.Tasks;
 
 namespace msLil.Customers.Controllers
 {
@@ -22,7 +18,7 @@ namespace msLil.Customers.Controllers
         public async Task<IActionResult> GetAsync(string Id)
         {
             var result = await _customerProvider.GetAsync(Id);
-            if(result !=  null)
+            if (result != null)
             {
                 return Ok(result);
             }
